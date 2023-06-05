@@ -19,8 +19,8 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Log In')
 
 
-# class AddForm(FlaskForm):
-#     Name = StringField('First Name', validators=[InputRequired()])
-#     Last_name = TextAreaField('Last Name', validators=[Optional()])
-#     Phone_number = StringField('Phone number', validators=[InputRequired()])
-#     Address = SubmitField('Address', validators=[Optional()])
+class AddForm(FlaskForm):
+    Name = StringField('First Name', validators=[InputRequired()])
+    Last_name = TextAreaField('Last Name', validators=[Optional()])
+    Phone_number = StringField('Phone number', validators=[InputRequired()])
+    Address = SubmitField('Address', validators=[Optional()])

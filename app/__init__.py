@@ -1,5 +1,9 @@
 from flask import Flask
+from config import Config
+from flask_login import LoginManager
 
 app = Flask(__name__)
 
-from app import routes
+app.config.from_object(Config)
+
+from . import routes
