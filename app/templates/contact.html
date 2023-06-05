@@ -3,7 +3,7 @@
 {% block title %} Create a Contact {% endblock %}
 
 {% block header %}
-    <h3>Create a contact</h3>
+    <h3>Add contact</h3>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@
                        {{ form.csrf_token }}
 
                        {{ form.first_name.label }}
-                       {{ form.name(class='form-control', placeholder='Enter First Name') }}
+                       {{ form.first_name(class='form-control', placeholder='Enter First Name') }}
 
                        {{ form.last_name.label }}
                        {{ form.last_name(class='form-control', placeholder='Enter last name') }}

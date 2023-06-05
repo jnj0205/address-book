@@ -20,7 +20,8 @@ class LoginForm(FlaskForm):
 
 
 class AddForm(FlaskForm):
-    Name = StringField('First Name', validators=[InputRequired()])
-    Last_name = TextAreaField('Last Name', validators=[Optional()])
-    Phone_number = StringField('Phone number', validators=[InputRequired()])
-    Address = SubmitField('Address', validators=[Optional()])
+    first_name = StringField('First Name', validators=[InputRequired()])
+    last_name = TextAreaField('Last Name', validators=[Optional()])
+    phone_number = StringField('Phone number', validators=[InputRequired()])
+    address = SubmitField('Address', validators=[Optional()])
+    submit = SubmitField('Create contact')
