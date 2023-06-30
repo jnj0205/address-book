@@ -83,30 +83,17 @@ def logout():
 
 @app.route('/viewcontacts',methods=['GET','Post'])
 
-# @login_required
-# def viewcontacts():
-#     contacts = db.session.execute(db.select(Contact).where(Contact.user==current_user.id)).scalars().all()
-#     return render_template('viewcontacts.html',contacts=contacts)
+@login_required
+def viewcontacts():
+    contacts = db.session.execute(db.select(Contact).where(Contact.user==current_user.id)).scalars().all()
+    return render_template('viewcontacts.html',contacts=contacts)
 
 
-# @app.route('/editcontact',methods=['GET','Post'])
-# @login_required
-# def editcontact():
-#     form = EditForm()
-#     return render_template('editcontact.html',form=form)
-
-
-# @app.route('/deletecontact',methods=['GET','Post'])
-# @login_required
-# def deletecontact():
-#     flash('Contact deleted')
-#     return redirect(url_for('index'))
-
-
-# @app.route('/profile',methods=['GET','Post'])
-# @login_required
-# def viewprofile():
-#     return render_template('profile.html')
+@app.route('/deletecontact',methods=['GET','Post'])
+@login_required
+def deletecontact():
+    flash('Contact deleted')
+    return redirect(url_for('index'))
 
 @app.route('/search',methods=['GET','Post'])
 @login_required
